@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   <link rel="stylesheet" href="./style.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Responsive Navigation with Tailwind CSS</title>
+</head>
+<body id="content" class="light-mode"> <!-- Ensure that 'light-mode' class is applied by default -->
+    <header class="  sticky top-0  p-4 " id="container">
+        <div class="container mx-auto flex justify-around p-2 items-center sticky top-0">
+            <a href="#" class="text-xl font-semibold">J. cloude </a>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-button" class="lg:hidden focus:outline-none" onclick="toggleMenu()">
+                <svg id="open-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+                <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex space-x-10">
+                <a href="#" class="hover:text-black-300 hover:text-red-300">Home</a>
+                <a href="#" class="hover:text-black-300">About</a>
+                <a href="#" class="hover:text-black-300">Services</a>
+                <a href="#" class="hover:text-black-300">Portofolio</a>
+                <a href="#" class="hover:text-black-300">Blogs</a>
+                <a href="#" class="hover:text-black-300">Contact Us</a>
+            </nav>
+            <div class="icon">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-github"></i>
+                <i class="fab fa-facebook"></i>
+            </div>
+
+            <button id="darkModeToggle" class="fixed bottom-4 right-4 p-3 rounded-full bg-gray-900 text-white">
+                <i id="darkModeIcon" class="fas fa-sun"></i> <!-- Initially display moon icon -->
+            </button>
+
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="hidden" id="mobile-menu">
+        <div class="bg-blue-500 p-4">
+            <a href="#" class="block text-white font-semibold mb-3">Home</a>
+            <a href="#" class="block text-white font-semibold mb-3">About</a>
+            <a href="#" class="block text-white font-semibold mb-3">Services</a>
+            <a href="#" class="block text-white font-semibold">Contact</a>
+        </div>
+    </div>
+
+    <main class="container">
+        
+        <div class="home-paragraph">
+            <p id="typing-text"></p>
+            <h1>a  full service <br> digital agency</h1>
+            <p>
+
+                Muvico is a Creative Agency & Startup Studio that provides <br>
+                 Digital Products and Services turns to focus on client success</p>
+                <button>explore work</button>
+        </div>
+
+        <div class="main-background">
+            <img src="./assets/hero.png" alt="">
+            <div class="graph">
+            </div>
+        </div>
+    </main>
+
+    <div class="About-page"> 
+
+<div class="left-section">
+
+    <img src="./assets/about.jpg" alt="">
+
+    <img src="./assets/about2.jpg" alt="" id="img2">
+
+</div>
+<div class="right-section">
+
+    <span>about me</span>
+    <h1>better design <br> better exprience</h1>
+     <p style="margin-bottom: 20px; margin-top: 10px;"> 
+
+        Obviously I'm a Web Designer. Experienced with all stages of <br> the development cycle for dynamic web projects.</p>
+
+        <div class="prog">
+        <caption>wordpres</caption>
+        <p>80%</p>
+</div>
+
+        <progress id="file" value="80" max="100"> 32% </progress>  <br>
+
+        <div class="prog">
+            <caption>wordpres</caption>
+            <p>80%</p>
+    </div>
+        <progress id="file" value="80" max="100"> 32% </progress>  <br>
+
+        <div class="prog">
+            <caption>wordpres</caption>
+            <p>80%</p>
+    </div>
+        <progress id="file" value="80" max="100"> 32% </progress> 
+
+</div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
